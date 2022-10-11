@@ -14,7 +14,7 @@ docker run --rm -it \
 -v ./pro/conf/config-deploy-example.toml:/fisco/BcosBuilder/pro/config.toml:ro \
 -v ./generated:/fisco/BcosBuilder/pro/generated \
 toby1991/fisco-bcos-tars-builder:3.0.1-pro \
-python3 build_chain.py chain -o deploy -t node
+python3 build_chain.py chain -o deploy -t rpc
 ```
 ---
 ### Gateway
@@ -23,7 +23,7 @@ docker run --rm -it \
 -v ./pro/conf/config-deploy-example.toml:/fisco/BcosBuilder/pro/config.toml:ro \
 -v ./generated:/fisco/BcosBuilder/pro/generated \
 toby1991/fisco-bcos-tars-builder:3.0.1-pro \
-python3 build_chain.py chain -o deploy -t node
+python3 build_chain.py chain -o deploy -t gateway
 ```
 ---
 ### Node
