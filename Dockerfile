@@ -21,9 +21,11 @@ WORKDIR /fisco/BcosBuilder/pro
 # 运行build_chain.py脚本下载二进制，二进制包默认下载到binary目录
 RUN python3 build_chain.py download_binary
 
-# 部署配置
+# 部署配置 - in
 VOLUME /fisco/BcosBuilder/pro/config.toml
-# build配置
+# deploy配置 - out
+VOLUME /fisco/BcosBuilder/pro/generated
+# build配置 - out
 VOLUME /fisco/BcosBuilder/pro/output_dir
 
 CMD ["python3", "build_chain.py", "--help"]
